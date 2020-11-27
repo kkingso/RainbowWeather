@@ -11,9 +11,10 @@ import kotlin.coroutines.suspendCoroutine
  * 统一的网络数据源访问入口
  */
 object RainbowWeatherNetwork {
+
     private val placeService = ServiceCreator.create(PlaceService::class.java)
 
-    suspend fun searchPlaces(query: String) = placeService.searchPlaces((query)).await()
+    suspend fun searchPlaces(query: String) = placeService.searchPlaces(query).await()
 
     private suspend fun <T> Call<T>.await(): T {
         return suspendCoroutine { continuation ->

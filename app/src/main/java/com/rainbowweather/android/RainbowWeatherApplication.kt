@@ -13,7 +13,7 @@ class RainbowWeatherApplication : Application() {
 
     @SuppressLint("StaticFieldLeak")
     companion object {
-        const val TOKEN = ""
+        const val TOKEN = "jDU4ABvDca3Tvy8w"
         lateinit var context: Context
     }
 
